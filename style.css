@@ -1,0 +1,155 @@
+html {
+  transition: 300ms;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  font-family: sans-serif;
+}
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  box-sizing: inherit;
+  /* text-align: center; */
+  background-color: #0e131f;
+  color: #bbb8b8;
+  text-align: center;
+}
+.logo {
+  font-size: 1.5rem;
+  margin: 0 7rem;
+}
+#moviesResults {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 98%;
+  padding: auto;
+  transition: 500ms ease-out;
+  gap: 6rem;
+}
+#moviesResults img {
+  border: 5px solid rgb(138, 132, 132);
+  border-radius: 7px;
+  width: 320px;
+  height: 480px;
+}
+
+#moviesResults h1 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  max-width: fit-content;
+}
+#moviesResults div {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0 0 0;
+}
+#moviesResults p {
+  font-size: 0.8rem;
+  color: #cfcbcb7a;
+  margin: 0;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 1rem 0;
+}
+/* .search h1 {
+  font-size: 1rem;
+} */
+#searchInput {
+  height: 1.7rem;
+  width: 85%;
+  padding: 0.7rem;
+  border: 1px solid bisque;
+  border-radius: 0.5rem;
+  text-align: center;
+  background: none;
+  color: #f4f6fc;
+}
+/* .moviesResults {
+  margin: 1rem auto;
+} */
+.resultNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #e21934d0;
+  color: #c5c6c9;
+  text-align: center;
+  height: 30px;
+  width: 70px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn_style {
+  background: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  margin: 1.5rem;
+}
+a {
+  text-decoration: none;
+  background-color: #e21934d0;
+  /* padding: 1rem 2rem; */
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  color: #c5c6c9;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+@media (min-width: 720px) {
+  .logo {
+    text-align: left;
+  }
+  #moviesResults img {
+    border-radius: 5px;
+    width: 200px;
+    height: 300px;
+  }
+  #moviesResults {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* width: 98%; */
+    padding: auto;
+    transition: 500ms ease-out;
+  }
+  .resultNav button {
+    margin: 3rem 5rem;
+  }
+  .search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 1rem 0;
+  }
+  #searchInput {
+    height: 2.5rem;
+    width: 80%;
+  }
+}
