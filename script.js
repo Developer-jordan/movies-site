@@ -41,7 +41,7 @@ const getsearchresult = (movie_name, count) => {
 
 const likeCountsUpdate = (count) => {
   fetch(
-    `https://yts.mx/api/v2/list_movies.json?sort_by=like_count&page=${count}`
+    `https://yts.mx/api/v2/list_movies.json?sort_by=download_count&page=${count}&limit=50`
   )
     .then((res) => res.json())
     .then((movieInfo) => {
