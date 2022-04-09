@@ -15,8 +15,8 @@ body {
   width: 100%;
   box-sizing: inherit;
   /* text-align: center; */
-  background-color: #0e131f;
-  color: #bbb8b8;
+  background-color: #00675b;
+  color: #ffffff;
   text-align: center;
   font-size: 1rem;
 }
@@ -35,9 +35,9 @@ body {
   gap: 6rem;
 }
 #moviesResults img {
-  border: 3px solid rgb(138, 132, 132);
+  border: 3px solid rgba(8, 226, 197, 0.473);
   border-radius: 7px;
-  filter: drop-shadow(7px 8px 19px #000000);
+  filter: drop-shadow(4px 6px 12px #000000);
   width: 320px;
   height: 480px;
 }
@@ -79,10 +79,10 @@ body {
   height: 1.7rem;
   width: 85%;
   padding: 0.7rem;
-  border: 1px solid bisque;
+  border: none;
   border-radius: 0.5rem;
   text-align: center;
-  background: none;
+  background-color: #fff;
   color: #f4f6fc;
 }
 /* .moviesResults {
@@ -95,10 +95,10 @@ body {
 }
 
 .btn {
-  background-color: #e21934d0;
-  color: #c5c6c9;
+  background-color: #b2ebf2;
+  color: #ffffff;
   text-align: center;
-  height: 30px;
+  height: 25px;
   width: 70px;
   border: none;
   border-radius: 5px;
@@ -115,12 +115,13 @@ body {
 }
 a {
   text-decoration: none;
-  background-color: #e21934d0;
+  background-color: #b2ebf2;
   /* padding: 1rem 2rem; */
   margin: 0 0.5rem;
-  padding: 0.5rem 1rem;
-  color: #c5c6c9;
-  border-radius: 7px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+  border-radius: 5px;
   font-weight: 600;
 }
 .movies {

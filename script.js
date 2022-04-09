@@ -29,7 +29,7 @@ const getsearchresult = (movie_name, count) => {
           <p>${date}</p>
           <img src="${img}" alt="" />
           <button class="btn_style">
-            <a href="${download}">download</a>
+            <a href="${download}">Torrent</a>
           </button>
             
        </div>
@@ -60,7 +60,7 @@ const likeCountsUpdate = (count) => {
           <p>${date}</p>
           <img src="${img}" alt="" />
           <button class="btn_style">
-            <a href="${download}">download</a>
+            <a href="${download}">Torrent</a>
           </button>
 
        </div>
