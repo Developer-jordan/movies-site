@@ -32,9 +32,7 @@ const getsearchresult = (movie_name, count) => {
         <h1 class ="titles">${title}</h1>
         <p>${date}</p>
         </div>
-         
-
-       </div>
+                </div>
         `;
         moviesResults.innerHTML = moviesPoster;
       });
