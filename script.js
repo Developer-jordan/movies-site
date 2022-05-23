@@ -24,14 +24,16 @@ const getsearchresult = (movie_name, count) => {
         const download = movie.torrents[0].url;
 
         moviesPoster += `
-       <div class="movies">
-          <h1>${title}</h1>
-          <p>${date}</p>
-          <img src="${img}" alt="" />
-          <button class="btn_style">
-            <a href="${download}">Torrent</a>
-          </button>
-            
+        <div class="movies">
+        <a class="clean" href="${download}">
+        <img src="${img}" alt="" />
+        </a>
+        <div class="info">
+        <h1 class ="titles">${title}</h1>
+        <p>${date}</p>
+        </div>
+         
+
        </div>
         `;
         moviesResults.innerHTML = moviesPoster;
@@ -54,14 +56,19 @@ const likeCountsUpdate = (count) => {
         const date = movie.year;
         const download = movie.torrents[0].url;
 
+        //  <button class="btn_style">
+        //    <a href="${download}">Torrent</a>
+        //  </button>;
         moviesPoster += `
-       <div class="movies">
-          <h1 class ="titles">${title}</h1>
-          <p>${date}</p>
-          <img src="${img}" alt="" />
-          <button class="btn_style">
-            <a href="${download}">Torrent</a>
-          </button>
+        <div class="movies">
+        <a class="clean" href="${download}">
+        <img src="${img}" alt="" />
+        </a>
+        <div class="info">
+        <h1 class ="titles">${title}</h1>
+        <p>${date}</p>
+        </div>
+         
 
        </div>
         `;
