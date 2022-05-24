@@ -25,6 +25,7 @@ const getsearchresult = (movie_name, count) => {
 
         moviesPoster += `
         <div class="movies">
+        
         <a class="clean" href="${download}">
         <img src="${img}" alt="" />
         </a>
