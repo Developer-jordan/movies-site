@@ -15,7 +15,7 @@ body {
   width: 100%;
   box-sizing: inherit;
   /* text-align: center; */
-  background-color: #333;
+  background-color: rgb(6, 30, 31);
   color: #b2ebf2;
   font-size: 1rem;
 }
@@ -108,7 +108,7 @@ body {
 
 .btn {
   color: #b2ebf2;
-  background-color: #b2ebf2;
+  background-color: #0db653;
   text-align: center;
   height: 25px;
   width: 70px;
@@ -127,7 +127,7 @@ body {
 }
 a {
   text-decoration: none;
-  background-color: #b2ebf2;
+  background-color: #0db653;
   /* margin: 0 0.5rem; */
   padding: 0.3rem 0.7rem;
   font-size: 0.9rem;
