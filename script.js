@@ -16,30 +16,26 @@ const getsearchresult = (movie_name, count) => {
     .then((movieInfo) => {
       const moviesData = movieInfo.data.movies;
       let moviesPoster = "";
-
       moviesData.forEach((movie) => {
         const title = movie.title;
         const img = movie.large_cover_image;
         const date = movie.year;
         const download = movie.torrents[0].url;
-
         moviesPoster += `
         <div class="movies">
-        
-        <a class="clean" href="${download}">
-        <img src="${img}" alt="" />
-        </a>
-        <div class="info">
-        <h1 class ="titles">${title}</h1>
-        <p>${date}</p>
-        </div>
-                </div>
+         <a class="clean"  href="${download}">
+           <img src="${img}" alt="${title} movie poster" />
+         </a>
+         <div class="info">
+           <h1 class ="titles">${title}</h1>
+           <p>${date}</p>
+         </div>
+       </div>
         `;
         moviesResults.innerHTML = moviesPoster;
       });
     });
 };
-
 const likeCountsUpdate = (count) => {
   fetch(
     `https://yts.mx/api/v2/list_movies.json?sort_by=download_count&page=${count}&limit=50`
@@ -48,27 +44,20 @@ const likeCountsUpdate = (count) => {
     .then((movieInfo) => {
       const moviesData = movieInfo.data.movies;
       let moviesPoster = "";
-
       moviesData.forEach((movie) => {
         const title = movie.title;
         const img = movie.large_cover_image;
         const date = movie.year;
         const download = movie.torrents[0].url;
-
-        //  <button class="btn_style">
-        //    <a href="${download}">Torrent</a>
-        //  </button>;
         moviesPoster += `
         <div class="movies">
-        <a class="clean" href="${download}">
-        <img src="${img}" alt="" />
+        <a class="clean" tittle="link to download ${title} movie" href="${download}">
+        <img src="${img}" alt="${title} movie poster" />
         </a>
         <div class="info">
         <h1 class ="titles">${title}</h1>
         <p>${date}</p>
         </div>
-         
-
        </div>
         `;
         moviesResults.innerHTML = moviesPoster;
@@ -76,21 +65,17 @@ const likeCountsUpdate = (count) => {
     });
 };
 window.onload = likeCountsUpdate(page);
-
 searchBtn.addEventListener("click", () => {
   if (page < 1 || page > 1) {
     page = 1;
-    // pageNumber.innerHTML = page;
   }
   getsearchresult(searchInput.value);
 });
-
 const nex = () => {
   page++;
   pageNumber.innerText = page;
   if (searchInput.value === "") {
     console.log("null");
-    // pageNumber.innerHTML = page;
     likeCountsUpdate(page);
   } else {
     getsearchresult(searchInput.value, page);
@@ -99,7 +84,6 @@ const nex = () => {
 nextPageBtn.addEventListener("click", () => {
   nex();
 });
-
 const prev = () => {
   page--;
   if (searchInput.value === "") {
@@ -110,11 +94,7 @@ const prev = () => {
     pageNumber.innerHTML = page;
     getsearchresult(searchInput.value, page);
   }
-
-  // getsearchresult(searchInput.value, page--);
-  // pageNumber.innerHTML = page;
 };
-
 prevPageBtn.addEventListener("click", () => {
   if (page <= 1) {
     alert("you are on the first page");
@@ -122,13 +102,11 @@ prevPageBtn.addEventListener("click", () => {
     prev();
   }
 });
-
-// make enter key search
-searchInput.addEventListener("keyup", (e) => {
+searchInput.addEventListener("keydown", (e) => {
   page = 1;
   pageNumber.innerHTML = page;
 
-  if (e.keyCode === 13) {
+  if (e.keyCode === 48) {
     getsearchresult(searchInput.value);
   }
 });
