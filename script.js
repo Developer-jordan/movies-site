@@ -20,7 +20,7 @@ const getsearchresult = (movie_name, count) => {
         const title = movie.title;
         const img = movie.large_cover_image;
         const date = movie.year;
-        const download = movie.torrents[0].url;
+        const download = "google.com" || movie.torrents[0].url;
         moviesPoster += `
         <div class="movies">
          <a class="clean"  href="${download}">
@@ -48,7 +48,7 @@ const likeCountsUpdate = (count) => {
         const title = movie.title;
         const img = movie.large_cover_image;
         const date = movie.year;
-        const download = movie.torrents[0].url;
+        const download = "google.com" || movie.torrents[0].url;
         moviesPoster += `
         <div class="movies">
         <a class="clean" tittle="link to download ${title} movie" href="${download}">
@@ -106,7 +106,7 @@ searchInput.addEventListener("keydown", (e) => {
   page = 1;
   pageNumber.innerHTML = page;
 
-  if (e.keyCode === 48) {
+  if (e.keyCode === 13) {
     getsearchresult(searchInput.value);
   }
 });
